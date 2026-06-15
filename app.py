@@ -4,11 +4,7 @@ import numpy as np
 from PIL import Image
 
 # ✅ FIX: safe model loading for Streamlit
-model = tf.keras.models.load_model(
-    "digit_model.keras",
-    compile=False,
-    safe_mode=False
-)
+model = tf.keras.models.load_model("digit_model.h5", compile=False)
 
 st.title("Handwritten Digit Recognition")
 
